@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequestMapping
 @RestController
-public class Controller {
+public class EstoqueController {
 
     @GetMapping("/boasVindas")
     @PostMapping
