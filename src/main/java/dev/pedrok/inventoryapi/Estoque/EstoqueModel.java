@@ -1,6 +1,9 @@
-package dev.pedrok.inventoryapi;
+package dev.pedrok.inventoryapi.Estoque;
 
+import dev.pedrok.inventoryapi.DescricaoDoProduto.DescricaoDoProdutoModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "tb_cadastro")
@@ -9,19 +12,29 @@ public class EstoqueModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
-    String nomeDoProduto;
-    int quantidade;
-    String descricaoDoProduto;
-    String fornecedor;
-    double precoDoProduto;
+    private long id;
+
+   private String nomeDoProduto;
+
+   private int quantidade;
+
+   private List<DescricaoDoProdutoModel> descricaoDoProduto;
+
+   private String fornecedor;
+
+   private double precoDoProduto;
+
+   // @ManyToOne um produto tem uma unica descricao
+   @ManyToOne
+   @JoinColumn(name = "descricao_id") //Foreign Key ou Chave Estrangeira
+   private DescricaoDoProdutoModel descricao;
 
     public EstoqueModel(){
 
     }
 
     public EstoqueModel(String nomeDoProduto, String descricaoDoProduto, int quantidade, String fornecedor, double precoDoProduto) {
-        this.nomeDoProduto = EstoqueModel.this.nomeDoProduto;
+        this.nomeDoProduto = EstoqueModel;
         this.descricaoDoProduto = descricaoDoProduto;
         this.quantidade = quantidade;
         this.fornecedor = fornecedor;
@@ -48,7 +61,7 @@ public class EstoqueModel {
         return descricaoDoProduto;
     }
 
-    public void setDescricaoDoProduto(String descricaoDoProduto) {
+    public void setDescricaoDoProduto(List<DescricaoDoProdutoModel> descricaoDoProduto) {
         this.descricaoDoProduto = descricaoDoProduto;
     }
 

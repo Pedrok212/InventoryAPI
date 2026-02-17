@@ -1,4 +1,4 @@
-package dev.pedrok.inventoryapi;
+package dev.pedrok.inventoryapi.Estoque;
 
 import org.springframework.web.bind.annotation.*;
 
