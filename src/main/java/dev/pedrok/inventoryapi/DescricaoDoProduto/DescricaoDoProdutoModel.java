@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.DateTimeException;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -23,7 +25,10 @@ public class DescricaoDoProdutoModel {
 
     private String nome;
 
+    //@Column(unique = true) para deixar algo único no banco de dados
     private String tipo;
+
+    private LocalDate dataDeValidadeDoProduto;
 
 
     //@OneToMany uma descrição pode ter vários produtos
