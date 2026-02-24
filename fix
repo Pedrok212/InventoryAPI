@@ -1,0 +1,35 @@
+[33mcommit a87b351a46cdc2e0578ceb2caf0309e4e61a8ae8[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Pedrok212 <pedro_4x@outlook.com>
+Date:   Fri Feb 20 11:00:56 2026 -0300
+
+    fix:
+
+[33mcommit da3a3cebbdc62304d17c6a03c92da8a94dfaae83[m
+Author: Pedrok212 <pedro_4x@outlook.com>
+Date:   Fri Feb 20 10:52:41 2026 -0300
+
+    feat: Coloca o Lombok na classe para abstracao
+
+[33mcommit 82563b4056d6ab3a3317e3e819944d1cbe793d96[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Pedrok212 <pedro_4x@outlook.com>
+Date:   Tue Feb 17 15:44:26 2026 -0300
+
+    Modelagem do banco de dados, EstoqueModel e DescricaoDoProdutoModel feitos, anotations feitas para relacionamento de tabelas do banco
+
+[33mcommit fde58ab673e00504fcb3c918dddb849a3ba4eed3[m
+Author: Pedrok212 <pedro_4x@outlook.com>
+Date:   Mon Feb 16 07:27:38 2026 -0300
+
+    Criando uma entidade no banco de dados, a partir do EstoqueModel
+
+[33mcommit a981d7c735547f8c45cc5edf1825ab1a02518bc8[m
+Author: Pedrok212 <pedro_4x@outlook.com>
+Date:   Mon Feb 16 05:56:03 2026 -0300
+
+    Controller criado
+
+[33mcommit 5f613459e2e112b2c3cc0d47d3d2420882b915a5[m
+Author: Pedrok212 <pedro_4x@outlook.com>
+Date:   Mon Feb 16 05:15:43 2026 -0300
+
+    first commit
