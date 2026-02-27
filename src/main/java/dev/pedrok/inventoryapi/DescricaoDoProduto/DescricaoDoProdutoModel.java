@@ -23,7 +23,7 @@ public class DescricaoDoProdutoModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome;
+    private String nomeDoProduto;
 
     //@Column(unique = true) para deixar algo único no banco de dados
     private String tipo;

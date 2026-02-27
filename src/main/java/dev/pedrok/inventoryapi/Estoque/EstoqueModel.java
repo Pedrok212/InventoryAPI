@@ -21,11 +21,8 @@ public class EstoqueModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-   private String nomeDoProduto;
 
    private int quantidade;
-
-   private List<DescricaoDoProdutoModel> descricaoDoProduto;
 
    private String fornecedor;
 
