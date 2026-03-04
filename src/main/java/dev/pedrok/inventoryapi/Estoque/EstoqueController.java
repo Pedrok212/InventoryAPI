@@ -4,7 +4,7 @@ import jdk.jfr.Registered;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping
-@RestController
+@RestController("/user")
 public class EstoqueController {
 
     @GetMapping("/boasVindas")
