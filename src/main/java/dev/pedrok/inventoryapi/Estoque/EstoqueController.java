@@ -1,5 +1,6 @@
 package dev.pedrok.inventoryapi.Estoque;
 
+import jdk.jfr.Registered;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping
