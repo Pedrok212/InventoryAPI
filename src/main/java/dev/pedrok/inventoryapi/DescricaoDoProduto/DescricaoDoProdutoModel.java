@@ -1,6 +1,7 @@
 package dev.pedrok.inventoryapi.DescricaoDoProduto;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import dev.pedrok.inventoryapi.Estoque.EstoqueModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -33,6 +34,7 @@ public class DescricaoDoProdutoModel {
 
     //@OneToMany uma descrição pode ter vários produtos
     @OneToMany(mappedBy = "descricao")
+    @JsonIgnore
     private List<EstoqueModel> produto;
 
 }

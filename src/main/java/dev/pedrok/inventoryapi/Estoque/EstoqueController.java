@@ -3,9 +3,17 @@ package dev.pedrok.inventoryapi.Estoque;
 import jdk.jfr.Registered;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping
-@RestController("/user")
+import java.util.List;
+
+@RequestMapping("/user")
+@RestController
 public class EstoqueController {
+
+    private EstoqueService estoqueService;
+
+    public EstoqueController(EstoqueService estoqueService) {
+        this.estoqueService = estoqueService;
+    }
 
     @GetMapping("/boasVindas")
     public String boasVindas() {
@@ -27,8 +35,8 @@ public class EstoqueController {
     //Mostrar os produtos por sessão, mercearia, congelados, higiene(READ)
 
     @GetMapping("/produtos")
-    public String mostrarProduto(){
-        return "Mostrar produto por sessão";
+    public List<EstoqueModel> listarProduto(){
+        return estoqueService.listarProdutos();
     }
 
     // Alterar alguma coisa do produto caso seja necessário(UPDATE)
