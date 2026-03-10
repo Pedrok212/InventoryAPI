@@ -27,9 +27,9 @@ public class EstoqueController {
     }
 
     // Procurar produtos tanto por nome, quanto por código(READ)
-    @GetMapping("/procura")
-    public String procurarProduto(){
-        return "Caçando produto";
+    @GetMapping("/produtos/{id}")
+    public EstoqueModel mostrarProdutosPorId(@PathVariable Long id){
+        return estoqueService.listarProdutosPorId(id);
     }
 
     //Mostrar os produtos por sessão, mercearia, congelados, higiene(READ)

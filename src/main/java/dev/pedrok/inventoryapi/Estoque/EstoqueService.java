@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EstoqueService {
@@ -22,5 +23,11 @@ public class EstoqueService {
 
     }
 
+    //Listar produtos por ID
+
+    public EstoqueModel listarProdutosPorId(Long id){
+        Optional<EstoqueModel> produtoPorId = estoqueRepository.findById(id);
+        return produtoPorId.orElse(null);
+    }
 
 }
