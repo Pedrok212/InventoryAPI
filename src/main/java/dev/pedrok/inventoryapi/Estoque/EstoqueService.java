@@ -30,4 +30,10 @@ public class EstoqueService {
         return produtoPorId.orElse(null);
     }
 
+    // Criar um novo produto
+
+    public EstoqueModel criarProduto(EstoqueModel produto){
+        return estoqueRepository.save(produto);
+    }
+
 }

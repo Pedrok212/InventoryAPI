@@ -22,8 +22,8 @@ public class EstoqueController {
 
     // Adicionar produto (CREATE)
     @PostMapping("/criarProduto")
-    public String criarProduto(){
-        return "Produto criado";
+    public EstoqueModel criarProduto(@RequestBody EstoqueModel produto){
+        return estoqueService.criarProduto(produto);
     }
 
     // Procurar produtos tanto por nome, quanto por código(READ)

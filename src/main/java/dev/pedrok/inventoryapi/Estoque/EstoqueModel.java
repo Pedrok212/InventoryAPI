@@ -29,8 +29,8 @@ public class EstoqueModel {
    private double precoDoProduto;
 
    // @ManyToOne um produto tem uma unica descricao
-   @ManyToOne
-   @JoinColumn(name = "descricao_id") //Foreign Key ou Chave Estrangeira
+   @ManyToOne(cascade = CascadeType.PERSIST)
+   @JoinColumn(name = "descricao_id")//Foreign Key ou Chave Estrangeira
    private DescricaoDoProdutoModel descricao;
 
 }
