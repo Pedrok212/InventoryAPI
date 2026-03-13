@@ -11,10 +11,14 @@ import java.util.List;
 public class DescricaoDoProdutoController {
 
     private final EstoqueService estoqueService;
+    private final DescricaoDoProdutoService descricaoService;
 
-    public DescricaoDoProdutoController(EstoqueService estoqueService) {
+    public DescricaoDoProdutoController(EstoqueService estoqueService,
+                                        DescricaoDoProdutoService descricaoService) {
         this.estoqueService = estoqueService;
+        this.descricaoService = descricaoService;
     }
+
 
     @GetMapping("/produtos/{id}")
     public EstoqueModel mostrarProdutosPorId(@PathVariable Long id){
@@ -29,9 +33,10 @@ public class DescricaoDoProdutoController {
     }
 
     // Alterar alguma coisa do produto caso seja necessário(UPDATE)
-    @PutMapping("/alterarInfoProduto")
-    public String alterarProduto(){
-        return "Alterar alguma coisa do produto";
+    @PutMapping("/alterarInfoProduto/{id}")
+    public DescricaoDoProdutoModel alterarProduto(@PathVariable Long id,
+                                                  @RequestBody DescricaoDoProdutoModel produtoAtualizado) {
+        return descricaoService.atualizarDescricao(id, produtoAtualizado);
     }
 
     // Deletar produto que a empresa não vende mais(DELETE)
