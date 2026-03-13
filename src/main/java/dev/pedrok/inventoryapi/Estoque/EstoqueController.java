@@ -46,8 +46,8 @@ public class EstoqueController {
     }
 
     // Deletar produto que a empresa não vende mais(DELETE)
-        @DeleteMapping("/excluirProduto")
-        public String excluirProduto(){
-            return "Tirar o produto de estoque";
+        @DeleteMapping("/excluir/{id}")
+        public void excluirProduto(@PathVariable Long id){
+            estoqueService.deletarProdutoPorId(id);
         }
 }

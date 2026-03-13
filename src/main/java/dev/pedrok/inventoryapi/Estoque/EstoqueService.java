@@ -36,4 +36,10 @@ public class EstoqueService {
         return estoqueRepository.save(produto);
     }
 
+
+    //Deletar produto por ID - Tem que ser um metodo VOID porque nao precisa mostrar pro usuario
+
+    public void deletarProdutoPorId(Long id){
+         estoqueRepository.deleteById(id);
+    }
 }
